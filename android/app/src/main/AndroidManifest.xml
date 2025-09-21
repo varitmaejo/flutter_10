@@ -1,15 +1,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- กำหนดว่าแอปใช้ฟีเจอร์กล้อง แต่ไม่บังคับ (required="false") -->
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
 
+    <!-- ขอสิทธิ์เข้าถึงกล้องเพื่อถ่ายภาพและวิดีโอ -->
     <uses-permission android:name="android.permission.CAMERA"/>
+
+    <!-- ขอสิทธิ์บันทึกเสียงเมื่อถ่ายวิดีโอ -->
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
+    <!-- สิทธิ์อ่านไฟล์สำหรับ Android 13+ (API 33+) -->
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
 
+    <!-- สิทธิ์อ่าน/เขียนไฟล์สำหรับ Android เก่า (API 32 ลงมา) -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
